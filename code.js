@@ -1,12 +1,26 @@
-const main = document.querySelector('main');
-console.log(main);
-const headElement = document.querySelector('h1');
-console.log(headElement);
+const main = document.querySelector('#main');
+const headerElement = document.querySelector('header');
 
-const createQrCodeinMain = () => {
-    const outPutOnMain = document.createElement('p')
-    const outPutOnMain = "Hello World!";
-    console.log(output);
-}
+let userClicksButton = () => {
+    //Create the button
+    let userButton = document.createElement('button');
+    userButton.textContent = `Click Me!`;
+    headerElement.append(userButton);
 
-helloWorld ();
+    //When the button is clicked
+    //Fetch a new QR code from the API
+    //Create the QR code within the Main element
+    let createQrCodeOnMain = () => {
+        let outPutOnMain = document.createElement('div');
+    
+         outPutOnMain.innerHTML =`
+         <h4>Hello World!</h4>
+         `;
+         
+         main.append(outPutOnMain);
+    };
+    
+    createQrCodeOnMain ();
+
+};
+userClicksButton();
